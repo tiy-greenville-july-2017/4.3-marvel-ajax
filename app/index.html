@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 3 marvel</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <ul class="characters">
+        <!-- handlebars template -->
+      </ul>
+    </div>
+
+    <div class="modal js-modal">
+      <div class="modal-content js-modal-content">
+        <!-- Comic Template Populates This -->
+      </div>
+    </div>
+
+    <script id="character-template" type="text/x-handlebars-template">
+      <li class="character">
+        <img src="{{ thumbnail.path }}.{{ thumbnail.extension }}" alt="">
+        <button class="js-character-button character-btn" type="button" name="button">{{ name }}</button>
+      </li>
+    </script>
+
+    <script id="comic-template" type="text/x-handlebars-template">
+      <h1>There Are {{count}} Comics</h1>
+
+      {{#each comics}}
+        <div class="comic">
+          <img src="{{thumbnail.path}}.{{thumbnail.extension}}" alt="{{title}}">
+        </div>
+      {{/each}}
+    </script>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

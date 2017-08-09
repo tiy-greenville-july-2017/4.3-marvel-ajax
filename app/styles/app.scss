@@ -1,0 +1,43 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+  overflow: auto;
+}
+
+.modal.is-active {
+  display: block;
+}
+
+.modal-content {
+  max-width: 600px;
+  margin: 10% auto;
+  background-color: white;
+  min-height: 250px;
+}
+
+.comic img {
+  max-height: 250px;
+}
